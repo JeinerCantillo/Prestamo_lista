@@ -24,16 +24,16 @@ class ExtraerDatos extends ConsultasDB
 
 		
 	//MUESTRA LISTADO DE USUARIOS
-	function listadoprestamo($start=0, $regsCant = 0){
-		$sql = "SELECT * FROM prestamo";
+	function listadoprestamos($start=0, $regsCant = 0){
+		$sql = "SELECT * FROM prestamos";
 		if ($regsCant > 0 )
 			 $sql = "SELECT * from prestamo $start,$regsCant";
 		$lista = $this->consulta_generales($sql);	
 		return $lista;
 	}
 	// DETALLE DE USUARIOS SELECICONADA SEGUN ID
-	function prestamoDetalle($idu){
-		$sql = "SELECT * from prestamo where cod=$idu ";
+	function prestamosDetalle($idu){
+		$sql = "SELECT * from prestamos where cod=$idu ";
 		$lista = $this->consulta_generales($sql);	
 		return $lista;
 	}
@@ -44,15 +44,15 @@ class ExtraerDatos extends ConsultasDB
 
 	//MUESTRA LISTADO DE EMPLEADOS
 	function listadousuario($start=0, $regsCant = 0){
-		$sql = "SELECT * FROM prestamo";
+		$sql = "SELECT * FROM prestamos";
 		if ($regsCant > 0 )
-			 $sql = "SELECT * from prestamo $start,$regsCant";
+			 $sql = "SELECT * from prestamos $start,$regsCant";
 		$lista = $this->consulta_generales($sql);	
 		return $lista;
 	}
 	// DETALLE DE EMPLEADOS SELECICONADA SEGUN ID
 	function usuarioDetalle($idu){
-		$sql = "SELECT * from prestamo where cod=$idu ";
+		$sql = "SELECT * from prestamos where cod=$idu ";
 		$lista = $this->consulta_generales($sql);	
 		return $lista;
 	}
