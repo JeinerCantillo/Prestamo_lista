@@ -2,16 +2,16 @@
     include "../prestamo_controller_consultas_backend_api.php";
 
 
-    class prestamoAPI{
+    class prestamosAPI{
 
         function getAllusuario(){
             $objDB = new ExtraerDatos();
             $data = array();
 
             if (isset($_GET["id"])){
-                $data = $objDB->prestamoDetalle($_GET["id"]);
+                $data = $objDB->prestamosDetalle($_GET["id"]);
             }else{
-                $data = $objDB->listadoprestamo();
+                $data = $objDB->listadoprestamos();
             }
 
             $usuario = array();
@@ -32,7 +32,7 @@
                 }
                 $usuario["msg"] = "OK";
                 $usuario["error"] = "0";
-                echo json_encode($prestamo);
+                echo json_encode($prestamos);
                 
             }else{
                 echo json_encode(array("data"=>null, "error"=>"1", "msg"=>"NO hay datos", ));
