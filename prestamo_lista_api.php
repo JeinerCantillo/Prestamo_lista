@@ -6,19 +6,19 @@
     header("Content-Type: Application/json");
     switch ($method) {
         case 'GET':
-            $objAPI->getAllprestamo();                        
+            $objAPI->getAllprestamos();                        
             break;
 
         case 'POST':
-            $objAPI->saveuprestamo();
+            $objAPI->saveuprestamos();
             break;
 
         case 'PUT':
-            $objAPI->updateprestamo();
+            $objAPI->updateprestamos();
             break;
 
         case 'DELETE':
-            $objAPI->deleteprestamo();
+            $objAPI->deleteprestamos();
             break;
 
         
